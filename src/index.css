@@ -1,13 +1,129 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*CSS DE HOME.JSX*/
+
+/*CSS DE NAVBAR.JSX*/
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+nav {
+  background-color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+}
+
+/*CSS DE ORIGEN.JSX*/
+
+/*CSS DE ADIESTRAMIENTO.JSX*/
+
+/*CSS DE PEDIGREE.JSX*/
+
+/*CSS DE PERRO.JSX*/
+
+/*CSS DE CONTACTO.JSX*/
+
+/*CSS DE ERRORPAGE.JSX*/
+.container-error{
+  text-align: center;
+  margin: 20px;
+}
+
+.h1__container-error{
+  color: black;
+}
+.p-error{
+  color: black;
+  text-align: center;
+}
+.imagen-error{
+  size: 10%;
+}
+
+/*CSS DE FOOTER.JSX*/
+.footer-top {
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: left;
+  color: #FFFFFF;
+  background-color: #555;
+}
+
+.container-footer-sup{
+  background-color: #555;
+}
+
+.footer-about img.logo-footer {
+  max-width: 74px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.footer-contact h2 {
+  padding-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-terminos a {
+  color: #FFFFFF;
+}
+
+.footer-terminos h2 {
+  padding-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  padding: 10px 0 15px 0;
+  background-color: #000000;
+  text-align: left;
+  color: #aaa;
+}
+
+.container-footer-inf{
+  background-color: #000000;
+}
+
+.footer-copyright {
+  padding-top: 5px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer-copyright a {
+  color: #FFFFFF;
+}
+
+.footer-redes {
+  padding-top: 3px;
+  text-align: center;
+}
+
+.footer-redes a {
+  margin-left: 20px;
+  color: #FFFFFF;
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
 }
