@@ -1,0 +1,37 @@
+.logonavbar {
+  width: 50px;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #414141;
+  padding-top: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #99cc05;
+  padding: 10px;
+}
+
+.custom-nav .nav-link {
+  color: #99cc05;
+    font-weight: bold;
+}
+
+.custom-nav .nav-link.active,
+.custom-nav .nav-link.active:hover,
+.custom-nav .nav-link.active:focus {
+  font-weight: bold;
+  color: #ffffff; /* Cambia el color a blanco para los elementos activos */
+}

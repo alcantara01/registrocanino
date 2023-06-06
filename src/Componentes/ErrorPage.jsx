@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ImgError from "../img/error.png";
 import "../index.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 // Declaramos una página de error para que aparezca en vez de un error por defecto
 function ErrorPage() {
@@ -14,8 +15,8 @@ function ErrorPage() {
         en su búsqueda.
       </p>
       <Link to="/">Volver a la página de inicio</Link>
-      <div className="imagen-error container-fluid">
-        <img src={ImgError} alt="" />
+      <div className="imagen-error container">
+        <img src={ImgError} alt="Error Página No Encontrada" />
       </div>
     </div>
   );

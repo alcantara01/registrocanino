@@ -1,0 +1,192 @@
+/* Importar los estilos de FontAwesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"); 
+.tree {
+  margin: 0 auto;
+}
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+  any siblings*/
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and 
+  right connector from last child*/
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li div {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+  font-family: arial, verdana, tahoma;
+  font-size: 12px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  background: #fff;
+}
+
+/*Hover effects*/
+.tree li div:hover,
+.tree li div:hover+ul li div {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+
+/*Active effects*/
+.tree li div.active,
+.tree li div.active+ul li div {
+  background: #bfdbfe;
+  color: #000;
+  border: 1px solid #84a0c6;
+}
+
+/*No pointer for parents*/
+.tree li div a {
+  pointer-events: none;
+}
+
+/*Connector styles on hover*/
+.tree li div:hover+ul li::after,
+.tree li div:hover+ul li::before,
+.tree li div:hover+ul::before,
+.tree li div:hover+ul ul::before {
+  border-color: #94a0b4;
+}
+
+/*Icon styles*/
+.tree li div .glyphicon {
+  color: #0074d9;
+}
+
+.tree li div .glyphicon-file {
+  color: #009900;
+}
+
+.tree li div .glyphicon-plus,
+.tree li div .glyphicon-minus {
+  cursor: pointer;
+}
+
+.tree li div .glyphicon-plus {
+  display: inline-block;
+}
+
+.tree li div .glyphicon-minus {
+  display: none;
+}
+
+.tree li.loading div .glyphicon-plus {
+  display: none;
+}
+
+.tree li.loading div .glyphicon-minus {
+  display: inline-block;
+}
+
+.tree li.loading div .glyphicon-refresh {
+  display: inline-block;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/*Correct the highlighted nodes*/
+.tree li.correct div,
+.tree li.correct div+ul li div {
+  background: #4cae4c;
+  color: #fff;
+  border: 1px solid #4cae4c;
+}
+
+/*Correct the highlighted connectors*/
+.tree li.correct div+ul li::after,
+.tree li.correct div+ul li::before,
+.tree li.correct div+ul::before,
+.tree li.correct div+ul ul::before {
+  border-color: #4cae4c;
+}

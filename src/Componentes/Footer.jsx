@@ -14,10 +14,11 @@ import {
   FaFacebookSquare,
   FaTiktok,
   FaInstagram,
+  FaYoutube
 } from "react-icons/fa";
 // este es el logo de la palabra de disney
 // importamos el css del footer
-import "../index.css";
+import "../footer.css";
 
 function Footer() {
   return (
@@ -95,6 +96,12 @@ function Footer() {
               </a>
               <a href="https://instagram.com/presascanariosdalcantara">
                 <FaInstagram />
+              </a>
+              <a href="https://youtube.com/@presascanariosdealcantara893">
+                <FaYoutube />
+              </a>
+              <a href="https://www.youtube.com/@presascanariosdalcantara1265">
+                <FaYoutube />
               </a>
             </div>
           </div>
