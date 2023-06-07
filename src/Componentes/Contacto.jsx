@@ -1,96 +1,65 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import '../index.css';
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React from "react";
+import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Foto from "../img/sancho.png"
+import {
+  FaFacebookSquare,
+  FaTiktok,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Contacto = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-  };
-
   return (
-    <div className="container-fluid pt-3">
+    <div className="container-fluid pt-1">
+      <h1 className="titulo-pagina">Contáctanos</h1>
       <div className="row justify-content-center">
         <div className="col-md-12">
           <div className="wrapper">
             <div className="row no-gutters">
-              <div className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
-                <div className="contact-wrap w-100 p-md-5 p-4">
-                  <h3 className="mb-4">Ponerse en contacto</h3>
-                  <div id="form-message-warning" className="mb-4"></div>
-                  <form onSubmit={handleSubmit} className="contactForm">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label className="label" htmlFor="name">Nombre</label>
-                          <input type="text" className="form-control" name="name" id="name" placeholder="Nombre" />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <label className="label" htmlFor="email">Correo Electrónico</label>
-                          <input type="email" className="form-control" name="email" id="email" placeholder="Correo Electrónico" />
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label className="label" htmlFor="subject">Asunto</label>
-                          <input type="text" className="form-control" name="subject" id="subject" placeholder="Asunto" />
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label className="label" htmlFor="message">Mensaje</label>
-                          <textarea name="message" className="form-control" id="message" cols="30" rows="4" placeholder="Mensaje"></textarea>
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <input type="submit" value="Enviar mensaje" className="btn bg-secondary mt-2" />
-                          <div className="submitting"></div>
+              <div className="col-md-8">
+                <div className="card card-horizontal h-100 justify-content-center border-0">
+                  <div className="row no-gutters d-flex align-items-center">
+                    <div className="col-md-5">
+                      <img
+                        src={Foto}
+                        alt="Foto del creador"
+                        className="card-img"
+                      />
+                    </div>
+                    <div className="col-md-7">
+                      <div className="card-body redessociales">
+                        <h2 className="card-title">¡Síguenos en nuestras redes sociales!</h2>
+                        <div className="social-media">
+                          <p><a href="https://www.facebook.com/presasAlcantara"><FaFacebookSquare /></a> &nbsp;
+                          Únete a nuestra página de <a href="https://www.facebook.com/presasAlcantara" style={{color: "white"}}>Facebook</a>.</p>
+                          <p><a href="https://www.tiktok.com/@presasdealcantara"><FaTiktok /></a> &nbsp;
+                          ¡Ven a ver nuestros vídeos en <a href="https://www.tiktok.com/@presasdealcantara" style={{color: "white"}}>Tiktok</a>!</p>
+                          <p><a href="https://instagram.com/presascanariosdalcantara"><FaInstagram /></a> &nbsp;
+                          ¡Pásate a ver más fotos nuestras en <a href="https://instagram.com/presascanariosdalcantara" style={{color: "white"}}>Instagram</a>!</p>
+                          <p><a href="https://youtube.com/@presascanariosdealcantara893"><FaYoutube /></a> &nbsp;
+                          <a href="https://www.youtube.com/@presascanariosdalcantara1265"><FaYoutube /></a> &nbsp;
+                          Visita nuestros canales de <a href="https://youtube.com/@presascanariosdealcantara893" style={{color: "white"}}>Youtube</a>.</p>
                         </div>
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-5 d-flex align-items-stretch">
-                <div className="info-wrap w-100 p-lg-5 p-4">
-                  <h3 className="mb-4 mt-md-4">Información de contacto</h3>
-                  <div className="dbox w-100 d-flex align-items-start">
-                    <div className="icon d-flex align-items-center justify-content-center">
-                      <span className="fa fa-map-marker"></span>
-                    </div>
-                    <div className="text pl-4">
-                      <p><span>Dirección:</span> Cedillo del Condado, Toledo (45214)</p>
-                    </div>
-                  </div>
-                  <div className="dbox w-100 d-flex align-items-center">
-                    <div className="icon d-flex align-items-center justify-content-center">
-                      <span className="fa fa-phone"></span>
-                    </div>
-                    <div className="text pl-4">
-                      <p><span>Teléfono:</span> +34 669 143 825</p>
-                    </div>
-                  </div>
-                  <div className="dbox w-100 d-flex align-items-center">
-                    <div className="icon d-flex align-items-center justify-content-center">
-                      <span className="fa fa-paper-plane"></span>
-                    </div>
-                    <div className="text pl-4">
-                      <p><span>Email:</span> uguina220777@hotmail.com</p>
-                    </div>
-                  </div>
-                  <div className="dbox w-100 d-flex align-items-center">
-                    <div className="icon d-flex align-items-center justify-content-center">
-                      <span className="fa fa-globe"></span>
-                    </div>
-                    <div className="text pl-4">
-                      <p><span>Sitio web:</span></p>
-                    </div>
-                  </div>
-                </div>
+              <div className="col-md-4 pt-2">
+                <div className="map-wrapper text-center">                 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14173.857577409692!2d-3.9238787313248893!3d40.11246118282961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41efca1828ceb9%3A0x6c79c48fff61b622!2s45214%20Cedillo%20del%20Condado%2C%20Toledo!5e0!3m2!1ses!2ses!4v1686158026864!5m2!1ses!2ses"
+                    width="400"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                 </div>
               </div>
             </div>
           </div>

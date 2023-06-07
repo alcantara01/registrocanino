@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import "../index.css";
+import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 

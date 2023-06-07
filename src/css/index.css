@@ -40,15 +40,16 @@
   cursor: pointer;
 }
 /*CSS DE CONTACTO.JSX*/
-.container-shadow{
-  padding-top: 20px;
-}
-.info-wrap{
-  background-color: #99CC05;
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: black;
 }
 
-.formulario{
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0%;
+.redessociales{
+  background-color: #99CC05;
+  font-weight: bold;
+}
+
+.link-underline {
+  text-decoration: underline;
 }

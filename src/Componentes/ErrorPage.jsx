@@ -2,7 +2,7 @@ import React from "react";
 // la ruta de error se representará en errorElement y el error estará disponible con useRouteError
 import { Link } from "react-router-dom";
 import ImgError from "../img/error.png";
-import "../index.css";
+import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 // Declaramos una página de error para que aparezca en vez de un error por defecto

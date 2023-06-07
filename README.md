@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run dev` 
+(Primero tener arrancado el Módulo `Apache` y `MySQL` en XAMPP con la conficuracion de `server.js`)
+INICIA EN PARALELO EL SERVIDOR (`node server.js`) Y EL PROYECTO REACT (`npm start`).
+
+
+
 ### `npm start`
 
 Runs the app in the development mode.\

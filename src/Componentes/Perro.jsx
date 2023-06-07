@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import '../perro.css';
+import '../css/perro.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Perro = () => {
@@ -33,21 +33,27 @@ const Perro = () => {
         <div className="tree container-fluid">
           <ul>
             <li>
-              {perro.fotoPadre}
-              {perro.nombre}
+            <img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.foto} alt={perro.nombre}/><br/>
+            {perro.nombre}
               <ul>
                 <li>
-                  {perro.nombreMadre}
+                <img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoMadre} alt={perro.nombreMadre}/><br/>
+                  {perro.nombreMadre ? perro.nombreMadre : "Desconocida"}
                   <ul>
-                    <li>{perro.nombreAbuelaMaterna}</li>
-                    <li>{perro.nombreAbueloMaterno}</li>
+                    <li><img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoAbuelaMaterna} alt={perro.nombreAbuelaMaterna}/><br/>
+                    {perro.nombreAbuelaMaterna ? perro.nombreAbuelaMaterna : "Desconocida"}</li>
+                    <li><img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoAbueloMaterno} alt={perro.nombreAbueloMaterno}/><br/>
+                    {perro.nombreAbueloMaterno ? perro.nombreAbueloMaterno : "Desconocido"}</li>
                   </ul>
                 </li>
                 <li>
-                  {perro.nombrePadre}
+                <img className="fotoperro" style={{width: "100px" ,height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoPadre} alt={perro.nombrePadre}/><br/>
+                  {perro.nombrePadre  ? perro.nombrePadre : "Desconocido"}
                   <ul>
-                    <li>{perro.nombreAbuelaPaterna}</li>
-                    <li>{perro.nombreAbueloPaterno}</li>
+                    <li><img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoAbuelaPaterna} alt={perro.nombreAbuelaPaterna}/><br/>
+                    {perro.nombreAbuelaPaterna ? perro.nombreAbuelaPaterna : "Desconocida"}</li>
+                    <li><img className="fotoperro" style={{width: "100px" ,height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.fotoAbueloPaterno} alt={perro.nombreAbueloPaterno}/><br/>
+                    {perro.nombreAbueloPaterno ? perro.nombreAbueloPaterno : "Desconocido"}</li>
                   </ul>
                 </li>
               </ul>

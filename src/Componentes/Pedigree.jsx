@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../index.css";
+import "../css/index.css";
 
 const Pedigree = () => {
   const [perros, setPerros] = useState([]); // Define el estado "perros" como un arreglo vacío usando useState
@@ -42,11 +42,8 @@ const Pedigree = () => {
                       <p className="card-text">Afijo: {perro.afijo}</p>
                       <p className="card-text">
                         Fecha de Nacimiento:{" "}
-                        {perro.fechaNac
-                          ? new Date(perro.fechaNac).toLocaleDateString()
-                          : "Desconocida"}
+                        {perro.fechaNac ? new Date(perro.fechaNac).toLocaleDateString() : "Desconocida"}
                       </p>
-                      <p className="card-text">Pelaje: {perro.pelaje}</p>
                       <p className="card-text">Sexo: {perro.sexo}</p>
                       <a href={`/perros/${perro.id}`} className="buttonCard">
                         Ver Pedigree

@@ -1,12 +1,8 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React from "react";
 // importamos bootstrap
 import "bootstrap/dist/css/bootstrap.css";
-// estos son los iconos de react para nuestro footer
+// estos son los iconos de react para el footer
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -16,9 +12,8 @@ import {
   FaInstagram,
   FaYoutube
 } from "react-icons/fa";
-// este es el logo de la palabra de disney
 // importamos el css del footer
-import "../footer.css";
+import "../css/footer.css";
 
 function Footer() {
   return (

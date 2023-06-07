@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import "../index.css";
+import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slide1 from "../img/sancho.png";
 
@@ -8,8 +8,10 @@ import Slide1 from "../img/sancho.png";
 function Home() {
   return (
     <div className="container-fluid">
+      <h1 className="titulo-pagina">Inicio</h1>
       <h2>Presas Canarios De Alcántara: Registro Canino</h2>
       <p>Bienvenido a mi proyecto React.</p>
+      <p>Home no acabada</p>
       <div id="carouselId" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselId" data-slide-to="0" className="active"></li>
@@ -36,7 +38,7 @@ function Home() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-    </div>
+      </div>
   );
 }
 
