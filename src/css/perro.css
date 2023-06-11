@@ -1,5 +1,10 @@
 /* Importar los estilos de FontAwesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"); 
+
+.container-genealogia{
+margin: 0 auto;
+padding-top: 10px;
+}
 .fotoperro{
 width: 150px;
 }
@@ -131,50 +136,6 @@ width: 150px;
   border-color: #94a0b4;
 }
 
-/*Icon styles*/
-.tree li div .glyphicon {
-  color: #0074d9;
-}
-
-.tree li div .glyphicon-file {
-  color: #009900;
-}
-
-.tree li div .glyphicon-plus,
-.tree li div .glyphicon-minus {
-  cursor: pointer;
-}
-
-.tree li div .glyphicon-plus {
-  display: inline-block;
-}
-
-.tree li div .glyphicon-minus {
-  display: none;
-}
-
-.tree li.loading div .glyphicon-plus {
-  display: none;
-}
-
-.tree li.loading div .glyphicon-minus {
-  display: inline-block;
-}
-
-.tree li.loading div .glyphicon-refresh {
-  display: inline-block;
-  animation: spin 2s infinite linear;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
-
 /*Correct the highlighted nodes*/
 .tree li.correct div,
 .tree li.correct div+ul li div {
@@ -189,4 +150,20 @@ width: 150px;
 .tree li.correct div+ul::before,
 .tree li.correct div+ul ul::before {
   border-color: #4cae4c;
+}
+
+.container-informacion{
+margin: 0 auto;
+}
+.mas-informacion{
+  min-height: 120px
+}
+.buttonCard {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #99CC05;
+  color: #fff;
+  cursor: pointer;
 }

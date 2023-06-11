@@ -80,7 +80,7 @@ function Footer() {
         <div className="container-footer-inf container-fluid">
           <div className="row">
             <div className="col-md-6 footer-copyright">
-              © Presas Canarios De Alcántara{" "}
+              © Presas Canarios De Alcántara 2023{" "}
             </div>
             <div className="col-md-6 footer-redes">
               <a href="https://www.facebook.com/presasAlcantara">

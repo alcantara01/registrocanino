@@ -4,6 +4,13 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import '../css/perro.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  FaBirthdayCake,
+  FaFileSignature,
+  FaDog,
+  FaMars,
+  FaVenus,
+} from "react-icons/fa";
 
 const Perro = () => {
   const { id } = useParams(); // Obtiene el parámetro "id" de la URL usando el hook useParams de react-router-dom
@@ -26,11 +33,9 @@ const Perro = () => {
   }
   return (
     <div className="container-fluid">
-       <span className="glyphicon-plus"></span> {/* Icono de "más" */}
-      <h1>{perro.nombre}</h1>
-      <div>
-        <h2>Árbol Genealógico</h2>
-        <div className="tree container-fluid">
+      <div className="container-genealogia">
+        <div className="tree">
+        <h2 className="genealogia">Genealogía de {perro.nombre}</h2>
           <ul>
             <li>
             <img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.foto} alt={perro.nombre}/><br/>
@@ -61,6 +66,24 @@ const Perro = () => {
           </ul>
         </div>
       </div>
+      <div className="container-informacion">
+  <p>
+    <button className="buttonCard" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" data-bs-parent="#parentElement">
+      Más información
+    </button>
+  </p>
+  <div className="mas-informacion">
+    <div className="collapse" id="collapseWidthExample">
+      <div className="card card-body lista-informacion">
+       <p>Nombre completo del perro: {perro.nombre} {perro.afijo} <FaFileSignature /></p>
+       <p>Fecha de Nacimiento:  {perro.fechaNac ? new Date(perro.fechaNac).toLocaleDateString() : "Desconocida"} <FaBirthdayCake /></p>
+       <p>Pelaje: {perro.pelaje} <FaDog /></p>
+       <p>Sexo:{" "} {perro.sexo === "M" ? (<>Macho <FaMars /></>) : (<>Hembra <FaVenus /></>)}</p>
+       <p>Observaciones: {perro.descripcion ? perro.descripcion : ""}</p>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   );
 };

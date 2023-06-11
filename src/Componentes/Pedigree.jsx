@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/index.css";
+import "../css/pedigree.css";
 
 const Pedigree = () => {
   const [perros, setPerros] = useState([]); // Define el estado "perros" como un arreglo vacío usando useState
@@ -22,16 +22,16 @@ const Pedigree = () => {
   console.log(perros);
   return (
     <div className="container-fluid">
-      <h1 className="titulo-pagina">Pedigree</h1>
+      <h1 className="titulo-pagina">¡Nuestros perros!</h1>
       <div className="card-container">
         <div className="row">
           {perros.map((perro) => (
-            <div className="col-md-6 col-sm-12 mb-3" key={perro.id}>
+            <div className="col-xl-4 col-md-6 col-sm-6 col-xs-12 mb-3" key={perro.id}>
               <div className="card">
                 <div className="row g-0">
                   <div className="col-md-4 d-flex align-items-center justify-content-center">
                     <img
-                      className="imgCard img-fluid"
+                      className="imgCard"
                       src={process.env.PUBLIC_URL + "/" + perro.foto}
                       alt={perro.nombre}
                     />
@@ -42,7 +42,7 @@ const Pedigree = () => {
                       <p className="card-text">Afijo: {perro.afijo}</p>
                       <p className="card-text">
                         Fecha de Nacimiento:{" "}
-                        {perro.fechaNac ? new Date(perro.fechaNac).toLocaleDateString() : "Desconocida"}
+                        {perro.fechaNac ? new Date(perro.fechaNac).toLocaleDateString() : "Sin Datos"}
                       </p>
                       <p className="card-text">Sexo: {perro.sexo}</p>
                       <a href={`/perros/${perro.id}`} className="buttonCard">
