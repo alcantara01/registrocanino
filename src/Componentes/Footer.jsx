@@ -10,7 +10,8 @@ import {
   FaFacebookSquare,
   FaTiktok,
   FaInstagram,
-  FaYoutube
+  FaYoutube,
+  FaFacebookMessenger
 } from "react-icons/fa";
 // importamos el css del footer
 import "../css/footer.css";
@@ -97,6 +98,9 @@ function Footer() {
               </a>
               <a href="https://www.youtube.com/@presascanariosdalcantara1265">
                 <FaYoutube />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100015750826160">
+                <FaFacebookMessenger />
               </a>
             </div>
           </div>

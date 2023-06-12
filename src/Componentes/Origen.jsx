@@ -11,7 +11,14 @@ import FotoDrako from "../img/origen/drako.jpg";
 function Origen() {
   return (
     <div className="container-fluid origen">
-      <div className="mihistoria">
+       <header>
+          <ul className="menu">
+            <li><a href="#mihistoria">Mi historia</a></li>
+            <li><a href="#seccion2">Nuestro Estándar</a></li>
+            <li><a href="#seccion3">Sección 3</a></li>
+          </ul>
+      </header>
+      <div className="mihistoria" id="mihistoria">
         <div className="card mb-3 card-origen justify-content-center border-0 h-100">
           <div className="row g-0">
             <div className="col-md-8">

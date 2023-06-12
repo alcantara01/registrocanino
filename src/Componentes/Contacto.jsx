@@ -9,6 +9,7 @@ import {
   FaTiktok,
   FaInstagram,
   FaYoutube,
+  FaFacebookMessenger,
 } from "react-icons/fa";
 
 const Contacto = () => {
@@ -35,6 +36,8 @@ const Contacto = () => {
                         <div className="social-media">
                           <p><a href="https://www.facebook.com/presasAlcantara"><FaFacebookSquare /></a> &nbsp;
                           Únete a nuestra página de <a href="https://www.facebook.com/presasAlcantara" style={{color: "white"}}>Facebook</a>.</p>
+                          <p><a href="https://www.facebook.com/profile.php?id=100015750826160"><FaFacebookMessenger /></a>&nbsp;
+                          ¡Envíame un mensaje a través de <a href="https://www.facebook.com/profile.php?id=100015750826160" style={{color: "white"}}>Messenger</a>!</p>
                           <p><a href="https://www.tiktok.com/@presasdealcantara"><FaTiktok /></a> &nbsp;
                           ¡Ven a ver nuestros vídeos en <a href="https://www.tiktok.com/@presasdealcantara" style={{color: "white"}}>Tiktok</a>!</p>
                           <p><a href="https://instagram.com/presascanariosdalcantara"><FaInstagram /></a> &nbsp;
