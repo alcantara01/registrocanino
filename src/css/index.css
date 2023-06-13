@@ -9,6 +9,14 @@
   margin-bottom: 20px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.titulo2-pagina {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgb(153, 204, 5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family:'agency FB','lobster';
+}
 p{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -16,7 +24,57 @@ p{
 }
 
 /*CSS DE HOME.JSX*/
+.accordion-item {
+  margin-bottom: 10px;
+}
 
+.accordion-button.collapsed {
+  background-color: #d2ff4d; /* Cambia el color de fondo cuando el acordeón está colapsado */
+}
+
+.accordion-collapse {
+  background-color: #ccea70; /* Cambia el color de fondo del contenido colapsado */
+  padding: 10px;
+  border: none;
+}
+
+.accordion-content {
+  display: flex;
+}
+
+.accordion-text {
+  flex: 1;
+}
+
+.accordion-image {
+  flex: 1;
+  text-align: center;
+}
+
+.accordion-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.presacanario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presacanario button{
+  margin: 0 auto;
+  display: block;
+}
+.buttonCard {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #99CC05;
+  color: #fff;
+  cursor: pointer;
+}
 /*CSS DE ORIGEN.JSX*/
 .card-origen{
   max-width: 90%;
@@ -31,8 +89,61 @@ p{
   animation: colorChange 5s infinite;
 }
 
-/*CSS DE ADIESTRAMIENTO.JSX*/
+.menu{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 23px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
 
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  color: white;
+}
+
+.accordion-content {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-text {
+  flex: 1;
+}
+
+.accordion-image {
+  margin-left: 20px; /* Ajusta el margen según sea necesario */
+}
+/*CSS DE ADIESTRAMIENTO.JSX*/
+.adiestramiento{
+text-align: justify;
+margin: 0 auto;
+}
+
+.adiestramientocomplicado{
+margin-left: 50px;
+margin-right: 50px;
+}
+.violenciadegenero{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.center-video {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 /*CSS DE CONTACTO.JSX*/
 a:link, a:visited, a:active {
   text-decoration: none;

@@ -26,7 +26,7 @@ const Pedigree = () => {
       <div className="card-container">
         <div className="row">
           {perros.map((perro) => (
-            <div className="col-xl-4 col-md-6 col-sm-6 col-xs-12 mb-3" key={perro.id}>
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-3" key={perro.id}>
               <div className="card">
                 <div className="row g-0">
                   <div className="col-md-4 d-flex align-items-center justify-content-center">

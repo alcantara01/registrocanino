@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <div >
     <nav className="navbar navbar-expand-md">
-      <img src={Logo} className="logonavbar" alt="Logo" />
+    <NavLink exact to="/" className="nav-link" activeClassName="active"><img src={Logo} className="logonavbar" alt="Logo" /></NavLink>
       <button
         className={`navbar-toggler ${isMenuOpen ? "active" : ""}`}
         type="button"

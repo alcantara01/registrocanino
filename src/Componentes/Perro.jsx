@@ -35,7 +35,7 @@ const Perro = () => {
     <div className="container-fluid">
       <div className="container-genealogia">
         <div className="tree">
-        <h2 className="genealogia">Genealogía de {perro.nombre}</h2>
+        <h2 className="genealogia">Pedigree de {perro.nombre}</h2>
           <ul>
             <li>
             <img className="fotoperro" style={{width: "100px", height: "100px"}} src={process.env.PUBLIC_URL + "/" + perro.foto} alt={perro.nombre}/><br/>

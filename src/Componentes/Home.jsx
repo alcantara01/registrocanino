@@ -8,23 +8,26 @@ import Slide3 from "../img/carrusel/slide3.jpg";
 import Noticia1 from "../img/noticias/noticia1.jpg";
 import Noticia2 from "../img/noticias/noticia2.jpg";
 import Noticia3 from "../img/noticias/noticia3.jpg";
+import  nagore from "../videos/nagore.mp4";
+import  drakoadara from "../videos/drakoadara.mp4";
 
 
 function Home() {
   return (
     <div className="container-fluid">
-      <h2 className="titulo-pagina">Presas Canarios De Alcántara: Registro Canino</h2>
-      <p>Home no acabada</p>
-      <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+      <h1 className="titulo-pagina">Presas Canarios De Alcántara: Registro Canino</h1>
+      <h3 className="titulo2-pagina">Cria y Seleccion del Perro de Presa Canario rústico, tradicional, funcional, carácter y equilibrio.</h3>
+      <h3 className="titulo2-pagina">Una raza que para describirla hay que VIVIRLA.</h3>
+      <div id="carouselExample" className="carousel slide d-flex align-items-center" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={Slide1} className="d-block" alt="Imagen 1" />
+            <img src={Slide1} className="d-block mx-auto" alt="Imagen 1" />
           </div>
           <div className="carousel-item">
-            <img src={Slide2} className="d-block w-100" alt="Imagen 2" />
+            <img src={Slide2} className="d-block mx-auto" alt="Imagen 2" />
           </div>
           <div className="carousel-item">
-            <img src={Slide3} className="d-block w-100" alt="Imagen 3" />
+            <img src={Slide3} className="d-block mx-auto" alt="Imagen 3" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -36,6 +39,41 @@ function Home() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <div className="videonagore">
+      <video width="640" height="360"  className="center-video" controls>
+        <source src={nagore} type="video/mp4" />
+        Tu navegador no admite la etiqueta de video.
+      </video>
+      </div>
+      <div className="videodrakoadara">
+      <video width="640" height="360"  className="center-video" controls>
+        <source src={drakoadara} type="video/mp4" />
+        Tu navegador no admite la etiqueta de video.
+      </video>
+      </div>
+      <div class="accordion accordion-flush m-5" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            ¿Presa Canario o Dogo Canario?
+          </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+              <div class="accordion-content">
+                <div class="accordion-text">
+                  ¿Por qué tanta polémica? ¿Es la misma raza? ¿En qué se diferencian? La respuesta es: depende de con quien hables. Hay criadores que confirman que son la misma, otros que vienen de líneas diferentes, pero lo que no cabe duda es 
+                  que tienen muchas características prácticamente iguales. Cuidado, no estamos hablando del Dogo Argentino, que esta raza si es distinta. Si investigamos podemos encontrar tantas respuestas distintas que es preferible que cada 
+                  uno investigue por sí mismo y saque sus propias conclusiones. Recomiendo esta <strong><a href="https://reygladiador.com/dogo-o-presa-canario-historia-de-una-polemica/">revista</a></strong> para empezar a ver de que trata la polémica.
+                </div>
+                <div class="accordion-image">
+                  <img src="ruta-de-la-imagen.jpg" alt="Imagen del item" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
       <div className="noticias m-4">
         <h2 className="titulo-pagina">Noticias relacionadas</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4 p-3">

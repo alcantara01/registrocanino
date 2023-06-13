@@ -2,22 +2,84 @@
 import React from "react";
 import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FotoOrigenPresa from "../img/origen/origenpresa.jpg";
 import FotoAstray from "../img/origen/astray.jpg";
 import FotoOrca from "../img/origen/orca.jpg";
 import FotoDama from "../img/origen/damamanga.jpg";
 import FotoDamaCain from "../img/origen/damaycain.jpg";
 import FotoDrako from "../img/origen/drako.jpg";
+import { FaPaw, FaRegHandPointer } from "react-icons/fa";
+import Decada1930 from "../img/inicio/1930.jpg";
+import Decada1973 from "../img/inicio/1973.jpg";
 
 function Origen() {
   return (
     <div className="container-fluid origen">
        <header>
-          <ul className="menu">
-            <li><a href="#mihistoria">Mi historia</a></li>
-            <li><a href="#seccion2">Nuestro Estándar</a></li>
-            <li><a href="#seccion3">Sección 3</a></li>
+          <ul className="menu justify-content-center">
+            <li><a href="#origenpresa">Origen del Presa Canario</a>&nbsp;&nbsp;<FaPaw /></li>
+            <li><a href="#mihistoria">Mi historia</a>&nbsp;&nbsp;<FaPaw /></li>
+            <li><a href="#nuestroestandar">Nuestro Estándar</a>&nbsp;&nbsp;<FaPaw /></li>
+            <li><a href="#seleccion">Selección</a></li>&nbsp;&nbsp;<FaPaw />
           </ul>
       </header>
+      <div className="origenpresa" id="origenpresa">
+        <div className="card mb-3 card-origen justify-content-center border-0 h-100">
+          <div className="row g-0">
+            <div className="col-md-8">
+              <div className="card-body">
+                <h4 className="card-title">Origen del Presa Canario</h4>
+                <hr />
+                <p className="card-text text-justify">
+                  Los relatos de los colonizadores españoles de las islas hacen mención a un perro de presa que se encontraba en todo el Archipiélago 
+                  Canario y que se empleaba como protector y guía del ganado. Esta raza se fue cruzando con otras provenientes de la Península Ibérica 
+                  de la familia del Presa Español y posteriormente con los canes tradicionales de pelea inglesa como el Bullterrier y el Bulldog. Fue 
+                  cuando el presa canario empezó a ser utilizado como combatiente en los enfrentamientos que los ingleses introdujeron en las islas. 
+                  Además, debemos tener en cuenta la influencia del Presa Majorero o Bardino, originario de las Islas Canarias, con el que también se
+                  mezcla y del que hereda el tipo y color del pelaje, parte de la expresión y la habilidad para proteger el ganado. 
+                </p>
+                <p className="card-text text-justify">
+                Con la prohibición 
+                  de estas peleas en las islas, en los años 60 se llega a un punto cercano a la desaparición de esta raza, pero a partir de los 70 se 
+                  inicia su recuperación y se ha logrado que el Presa Canario vuelva a estar presente en gran cantidad en todas las islas.
+                  La historia del Presa Canario se remonta a la raza ganadera Presa Ibérica (Perro de Ganado Majorero), una raza de mastín de tamaño mediano 
+                  y perro guardián intuitivo. Varios otros canes hispanos pueden haber contribuido a la formación del Presa Canario, en particular, el Presa 
+                  Español, así como el Bardino Majorero, un perro pastor prehispánico originario de la isla de Fuerteventura.
+                  Las raíces del Presa Canario las encontramos en las Islas Canarias, específicamente en las islas de Gran Canaria y Tenerife. De hecho, una 
+                  teoría sugiere que las Islas Canarias deben su nombre a estos perros, que desde tiempos antiguos las habitaban. Can-arias haría referencia 
+                  a "can", que significa perro en latín.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4 d-flex align-items-center justify-content-center">
+              <img src={FotoOrigenPresa} className="img-fluid" alt="Foto Origen ed Presa Canario" style={{ height: "100%" }} />
+            </div>
+          </div>
+        </div>
+     </div>
+     <div className="presacanario ">
+        <button type="button" class="buttonCard" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Presa Canario hace décadas <FaRegHandPointer />
+        </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Perros de Presa Canario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h3> Presa Canario de 1930</h3>
+                <p> Década 1930. Una foto bastante antigua, podemos apreciar el corte de las orejas, que ya estaba presente en esa época.</p>
+              <img src={Decada1930} alt="Presa Canario de 1930" style={{ maxWidth: '100%', height: 'auto' }} />
+                <h3> Presa Canario de 1973</h3>
+                <p> Cachorro de Presa Canario de Gran Canaria. Año 1973. Foto archivo de don Clemente Reyes Santana. Fuente: «El Perro de Presa Canario, su verdadero origen».</p>
+              <img src={Decada1973} alt="Cachorro de Presa Canario de 1973" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="mihistoria" id="mihistoria">
         <div className="card mb-3 card-origen justify-content-center border-0 h-100">
           <div className="row g-0">
@@ -70,7 +132,7 @@ function Origen() {
           </div>
         </div>
       </div>
-      <div className="nuestroestandar">
+      <div className="nuestroestandar" id="nuestroestandar">
         <div className="card mb-3 card-origen justify-content-center border-0 h-100">
           <div className="row g-0">
             <div className="col-md-8">
@@ -125,7 +187,7 @@ function Origen() {
           <div className="row g-0">
             <div className="col-md-8">
               <div className="card-body">
-              <h4 className="card-title">Selección</h4>
+              <h4 className="card-title" id="seleccion">Selección</h4>
                 <hr />
                 <p className="card-text text-justify">
                 Seleccionamos nuestros perros reproductores con el claro objetivo de la utilidad y la funcionalidad, manteniendo un equilibrio entre 
